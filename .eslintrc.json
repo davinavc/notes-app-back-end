@@ -11,6 +11,8 @@
     },
     "rules": {
         "no-console":"off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "space-before-blocks": "off",
+        "indent": "off"
     }
 }

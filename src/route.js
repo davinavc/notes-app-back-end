@@ -1,13 +1,10 @@
+const { addNoteHandler } = require('./handler');
+
 const routes = [
   {
     method: 'POST',
     path: '/notes',
-    handler: (req, h) => {
-      const {
-        id, title, createdAt, updatedAt, tags, body,
-      } = req.query;
-      return `${id} ${title} ${createdAt} ${updatedAt} ${tags} ${body}`;
-    },
+    handler: addNoteHandler,
   },
 ];
 module.exports = routes;
