@@ -1,5 +1,9 @@
 const {
-  addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler,
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler,
 } = require('./handler');
 
 const routes = [
@@ -22,10 +26,16 @@ const routes = [
     handler: getNoteByIdHandler,
   },
   {
-    // baut nampilin catatan nya di homepage
+    // baut edit catatan nya
     method: 'PUT',
     path: '/notes/{id}',
     handler: editNoteByIdHandler,
+  },
+  {
+    // baut hapus catatan
+    method: 'Delete',
+    path: '/notes/{id}',
+    handler: deleteNoteByIdHandler,
   },
 ];
 module.exports = routes;
